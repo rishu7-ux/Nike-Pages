@@ -1,0 +1,305 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body {
+
+    height: 100%;
+    width: 100%;
+}
+
+
+#main {
+
+width: 100%;
+height: 100%;
+background-color:#F5F5F5;
+position: relative;
+
+
+}
+#nav{
+ 
+   height: 110px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 50px;
+   z-index: 1000; /* ensures it stays on top */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    
+
+}
+
+#nav1 img{
+
+  height : 110px;
+  margin-right: 170px;
+
+
+}
+
+
+
+#nav1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#nav1 h4{
+    
+   margin-right: 60px; 
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 25px;
+   text-transform: uppercase;
+   font-weight: 600;
+   cursor: pointer;
+ 
+    }
+
+    #nav1 h4:hover {
+        background-color:black;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: all 0.5s ease;
+    }
+
+    
+#nav2 i{
+
+    margin-right: 60px; 
+    font-weight: 500;
+    font-size: 30px;
+}
+#nav2 i:hover {
+    transform: scale(1.2);
+    color: #0c0d0d;
+    text-shadow: 0 0 8px rgba(9, 9, 9, 0.6);
+     cursor: pointer;
+  }
+
+  
+
+
+
+
+#content{
+
+    width: 100%;
+    height:calc(100% - 110px);
+    position: relative;
+    display: flex;
+    
+}
+
+#left{
+    width: 40%;
+    height: 100%;
+    padding: 50px 120px;
+}
+
+#left h5 {
+font-size :20px;
+opacity: 0;
+ animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+
+}
+
+
+
+
+
+@keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+
+
+
+#left h1{
+    font-size: 65px;
+    font-weight: 600;
+   
+    margin-bottom: 60px;
+    line-height: 90px;
+ font-family: Arial, Helvetica, sans-serif;
+ animation: SlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+
+@keyframes SlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+#left P{
+    font-size :19px;
+    margin-bottom: 60px;
+   
+
+}
+#Right{
+
+    height: 100%;
+    width: 55%;
+   
+
+}
+
+
+#Right img {
+    margin-top:60px;
+    height: 743px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInRight 1.2s ease-out forwards;
+   animation-delay: 0.8s;
+
+  }
+  
+  @keyframes slideInRight  {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+     
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+    
+  }
+  
+  
+  
+
+
+
+
+
+
+/* ---------------- */
+
+
+
+#left button{
+    background-color: black;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 50px;
+
+}
+#left button:hover{
+
+    background-color:black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+/* for rersposive */
+
+
+@media (max-width: 1024px) {
+    #nav {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+  
+    #nav1 {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  
+    #nav1 img {
+      height: 80px;
+      margin-right: 20px;
+    }
+  
+    #nav1 h4 {
+      margin: 10px 15px;
+      font-size: 18px;
+    }
+  
+    #nav2 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #content {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    #left {
+      width: 100%;
+      padding: 30px 20px;
+      text-align: center;
+    }
+  
+    #left h1 {
+      font-size: 36px;
+      line-height: 50px;
+    }
+  
+    #left p {
+      font-size: 16px;
+    }
+  
+    #Right {
+      width: 100%;
+      height: auto;
+    }
+  
+    #Right img {
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+
